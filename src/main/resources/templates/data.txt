@@ -1,0 +1,4 @@
+ http.authorizeRequests()
+                .antMatchers("/admin").hasRole("Admin")
+                .antMatchers("/User").hasAnyRole("Admin","User")
+                .antMatchers("/").permitAll()
